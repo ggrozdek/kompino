@@ -269,3 +269,41 @@ opacity: 0.95;
   .grid-3{grid-template-columns:1fr}
   .mini-grid{grid-template-columns:1fr}
 }
+
+.contract-box{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:28px;
+  align-items:start;
+}
+
+.contract-left{
+  background:linear-gradient(180deg,#ffffff,#f3f6fb);
+  padding:28px;
+  border-radius:20px;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(0,0,0,.06);
+}
+
+.contract-right{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.mini-card{
+  padding:18px;
+  border-radius:18px;
+  background:#ffffff;
+  border:1px solid rgba(0,0,0,.05);
+  box-shadow:var(--shadow);
+}
+
+@media (max-width: 920px){
+  .contract-box{
+    grid-template-columns:1fr;
+  }
+  .contract-right{
+    grid-template-columns:1fr;
+  }
+}
