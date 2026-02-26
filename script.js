@@ -95,12 +95,12 @@
   const sideNext = root.querySelector('.ref-next')
 
   const refs = [
-    { src: 'assets/references/ref-1.png', alt: 'Referenca 1' },
-    { src: 'assets/references/ref-2.png', alt: 'Referenca 2' },
-    { src: 'assets/references/ref-3.png', alt: 'Referenca 3' },
+    { src: 'assets/references/Photoroom_20260226_134614.png', alt: 'Referenca 1' },
+    { src: 'assets/references/Photoroom_20260226_134636.png', alt: 'Referenca 2' },
+    { src: 'assets/references/Photoroom_20260226_134652.png', alt: 'Referenca 3' },
     { src: 'assets/references/ref-4.png', alt: 'Referenca 4' },
-    { src: 'assets/references/ref-5.png', alt: 'Referenca 5' },
-    { src: 'assets/references/ref-6.png', alt: 'Referenca 6' }
+    { src: 'assets/references/Photoroom_20260226_134705.png', alt: 'Referenca 5' },
+    { src: 'assets/references/Photoroom_20260226_134727.png', alt: 'Referenca 6' }
   ]
 
   const wrap = (i) => ((i % refs.length) + refs.length) % refs.length
