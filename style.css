@@ -198,8 +198,8 @@ p{margin:0 0 10px; line-height:1.6}
 .grid-3{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
-  gap:12px;
-  margin-top:14px;
+  gap:8px;
+  margin-top:8px;
 }
 .arrow{
   margin-top:10px;
