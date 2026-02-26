@@ -184,9 +184,9 @@ h1{
 .mini-title{font-weight:800; margin-bottom:6px}
 .mini-text{color:var(--muted); font-size:13px; line-height:1.5}
 
-.section{padding:8px 0}
+.section{padding:16px 0}
 h2{
-  margin:0 0 6px;
+  margin:0 0 10px;
   font-size: clamp(22px, 2.8vw, 30px);
   letter-spacing:-.02em;
 }
@@ -480,4 +480,7 @@ opacity: 0.95;
 .ref-main.slide-right{
   transform:translateX(40px);
   opacity:0;
+}
+.hero-small{
+  padding-bottom:4px;
 }
