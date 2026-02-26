@@ -147,7 +147,7 @@
   const stop = () => { if (timer) clearInterval(timer) }
   const start = () => {
     stop()
-    timer = setInterval(() => slide(1), 1500)
+    timer = setInterval(() => slide(1), 2000)
   }
 
   root.addEventListener('mouseenter', stop)
