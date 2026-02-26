@@ -95,7 +95,7 @@
   const sideNext = root.querySelector('.ref-next')
 
   const refs = [
-    { src: 'assets/references/4791C34D-9D27-4F0B-8ABC-5C532AE9A939.jpeg', alt: 'Referenca 1' },
+    { src: 'assets/references/Photoroom_20260226_164027.png', alt: 'Referenca 1' },
     { src: 'assets/references/Photoroom_20260226_134636.png', alt: 'Referenca 2' },
     { src: 'assets/references/Photoroom_20260226_134652.png', alt: 'Referenca 3' },
     { src: 'assets/references/ref-4.png', alt: 'Referenca 4' },
