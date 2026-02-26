@@ -99,7 +99,8 @@
     { src: 'assets/references/ref-2.png', alt: 'Referenca 2' },
     { src: 'assets/references/ref-3.png', alt: 'Referenca 3' },
     { src: 'assets/references/ref-4.png', alt: 'Referenca 4' },
-    { src: 'assets/references/ref-5.png', alt: 'Referenca 5' }
+    { src: 'assets/references/ref-5.png', alt: 'Referenca 5' },
+    { src: 'assets/references/ref-6.png', alt: 'Referenca 6' }
   ]
 
   const wrap = (i) => ((i % refs.length) + refs.length) % refs.length
@@ -146,7 +147,7 @@
   const stop = () => { if (timer) clearInterval(timer) }
   const start = () => {
     stop()
-    timer = setInterval(() => slide(1), 3000)
+    timer = setInterval(() => slide(1), 1500)
   }
 
   root.addEventListener('mouseenter', stop)
