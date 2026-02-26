@@ -100,7 +100,7 @@
     { src: 'assets/references/Photoroom_20260226_134652.png', alt: 'Referenca 3' },
     { src: 'assets/references/ref-4.png', alt: 'Referenca 4' },
     { src: 'assets/references/Photoroom_20260226_134705.png', alt: 'Referenca 5' },
-    { src: 'assets/references/Photoroom_20260226_134727.png', alt: 'Referenca 6' }
+    { src: 'assets/references/4791C34D-9D27-4F0B-8ABC-5C532AE9A939.png', alt: 'Referenca 6' }
   ]
 
   const wrap = (i) => ((i % refs.length) + refs.length) % refs.length
