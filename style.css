@@ -486,3 +486,115 @@ opacity: 0.95;
   padding-bottom:0px;
   padding-top:10px;
 }
+
+
+
+
+/* POPRAVEK: da se logo ne izgubi in ostane odrezan v nav baru */
+
+.topbar{
+  overflow:hidden;
+}
+
+.topbar-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:64px;
+  padding:0;
+}
+
+.brand{
+  position:relative;
+  display:flex;
+  align-items:center;
+  height:64px;
+  width:160px;
+  overflow:hidden;
+  text-decoration:none;
+}
+
+.brand-logo{
+  position:absolute;
+  top:50%;
+  left:0;
+  transform:translateY(-50%);
+  height:220px;
+  width:auto;
+  opacity:.22;
+  pointer-events:none;
+  z-index:1;
+}
+
+.nav,
+.menu-btn{
+  position:relative;
+  z-index:2;
+}
+
+@media (max-width: 720px){
+  .brand{
+    width:auto;
+    overflow:visible;
+  }
+  .brand-logo{
+    position:static;
+    transform:none;
+    height:28px;
+    opacity:.95;
+    pointer-events:auto;
+  }
+}
+
+/* Rešitev: naredi brand “okno” čez cel nav bar, da se vidi sredina logotipa */
+.topbar-inner{
+  position:relative;
+  height:64px;
+  padding:0;
+}
+
+/* Link naj ostane klikljiv in majhen. */
+.brand{
+  position:relative;
+  display:flex;
+  align-items:center;
+  height:64px;
+  width:auto;
+  overflow:visible;
+  text-decoration:none;
+  z-index:3;
+}
+
+/* Velik prosojen logo kot ozadje v nav baru */
+.topbar::before{
+  content:"";
+  position:absolute;
+  left:27%;
+  top:50%;
+  transform:translate(-50%, -50%);
+  width:420px;
+  height:220px;
+  background:url("assets/kompino-logo.png") center/contain no-repeat;
+  opacity:.18;
+  pointer-events:none;
+  z-index:1;
+}
+
+/* Vsebina nav-a naj bo nad ozadjem */
+.topbar-inner,
+.nav,
+.menu-btn{
+  position:relative;
+  z-index:2;
+}
+
+/* Skrij mali logo v kotu na računalniku (po želji) */
+@media (min-width: 721px){
+  .brand-logo{display:none;}
+}
+
+/* Na telefonu naj ostane normalni mali logo, brez velikega ozadja */
+@media (max-width: 720px){
+  .topbar::before{display:none;}
+  .brand-logo{display:block; height:28px; opacity:.95;}
+}
