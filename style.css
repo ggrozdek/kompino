@@ -672,3 +672,6 @@ html{
 #storitve{
   scroll-margin-top:80px;
 }
+.hero-grid > div:last-child{
+  margin-top:40px;
+}
