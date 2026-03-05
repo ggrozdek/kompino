@@ -666,5 +666,8 @@ html{
 }
 
 .hero-logo{
-  margin-top:-15px;
+  margin-top:-13px;
+}
+.hero-text{
+  transform: translateY(5px);
 }
