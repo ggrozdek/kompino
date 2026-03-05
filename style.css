@@ -584,6 +584,11 @@ opacity: 0.95;
   left: 30%;
 }
 }
+@media (max-width: 3465px) { 
+.topbar::before{
+  left: 30%;
+}
+}
 /* Vsebina nav-a naj bo nad ozadjem */
 .topbar-inner,
 .nav,
