@@ -675,3 +675,13 @@ html{
 .hero-grid > div:last-child{
   margin-top:40px;
 }
+@media (max-width: 1440px) { 
+.hero-grid > div:last-child{
+  margin-top:20px;
+}
+}
+@media (max-width: 3465px) { 
+.hero-grid > div:last-child{
+  margin-top:20px;
+}
+}
