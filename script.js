@@ -1,16 +1,19 @@
 (() => {
   const btn = document.querySelector('.menu-btn');
   const nav = document.querySelector('#nav');
+  const header = document.querySelector('.topbar');
   if (!btn || !nav) return;
 
   const closeNav = () => {
     nav.classList.remove('open');
     btn.setAttribute('aria-expanded', 'false');
+    header.classList.remove('menu-open');
   };
 
   btn.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('open');
     btn.setAttribute('aria-expanded', String(isOpen));
+    header.classList.toggle('menu-open', isOpen);
   });
 
   nav.addEventListener('click', (e) => {

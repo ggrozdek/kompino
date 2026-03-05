@@ -540,7 +540,7 @@ opacity: 0.95;
   .brand-logo{
     position:static;
     transform:none;
-    height:28px;
+    height:36px;
     opacity:.95;
     pointer-events:auto;
   }
@@ -579,7 +579,11 @@ opacity: 0.95;
   pointer-events:none;
   z-index:1;
 }
-
+@media (max-width: 1440px) { 
+.topbar::before{
+  left: 30%;
+}
+}
 /* Vsebina nav-a naj bo nad ozadjem */
 .topbar-inner,
 .nav,
@@ -596,5 +600,70 @@ opacity: 0.95;
 /* Na telefonu naj ostane normalni mali logo, brez velikega ozadja */
 @media (max-width: 720px){
   .topbar::before{display:none;}
-  .brand-logo{display:block; height:28px; opacity:.95;}
+  .brand-logo{display:block; height:36px; opacity:.95;}
+}
+/* MOBILE: spustni meni ne sme biti odrezan */
+@media (max-width: 720px){
+  .topbar{
+    overflow:visible;
+  }
+
+  /* na telefonu ugasni velik background logo */
+  .topbar.menu-open::before{
+    display:none;
+  }
+
+  /* meni mora biti nad vsem */
+  .nav{
+    z-index:9999;
+  }
+}
+@media (max-width: 720px){
+  .nav{
+    position:absolute;
+    right:20px;
+    top:68px;
+    display:none;
+    flex-direction:column;
+    gap:6px;
+    width:min(320px, calc(100% - 40px));
+    padding:10px;
+    border-radius:18px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.98);
+    box-shadow:var(--shadow);
+
+    max-height:calc(100vh - 88px);
+    overflow:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .nav.open{display:flex}
+}
+.nav-backdrop{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.25);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .2s ease;
+  z-index:40;
+}
+
+.topbar{z-index:50;}
+
+@media (max-width: 720px){
+  .nav.open ~ .nav-backdrop{opacity:1;}
+}
+html{
+  scroll-padding-top:80px;
+}
+#programska,
+#popravila,
+#omrezje,
+#vzdrzevanje,
+#kontakt,
+#reference,
+#storitve{
+  scroll-margin-top:80px;
 }
