@@ -3,14 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>KOMPINO | Računalniški servis in podpora</title>
-  <meta name="description" content="KOMPINO. Pogodbeno vzdrževanje računalnikov, servis, podpora na daljavo, omrežja in programska oprema." />
+  <title>Računalniški servis Maribor | KOMPINO</title>
+  <meta name="description" content="KOMPINO je računalniški servis v Mariboru. Nudimo popravilo računalnikov, servis prenosnikov, namestitev Windows, čiščenje, nadgradnje in pomoč na daljavo." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Circuit board animated background -->
+  <canvas id="circuit-bg"></canvas>
+
   <a class="skip" href="#vsebina">Preskoči na vsebino</a>
 
   <header class="topbar">
@@ -18,13 +21,10 @@
       <a class="brand" href="index.html" aria-label="KOMPINO domov">
         <img class="brand-logo" src="assets/kompino-logo.png" alt="KOMPINO logotip">
       </a>
-
       <button class="menu-btn" type="button" aria-label="Odpri meni" aria-expanded="false" aria-controls="nav">
         <span></span><span></span><span></span>
       </button>
-
       <nav id="nav" class="nav">
-        <a href="#reference">Reference</a>
         <a href="#kontakt">Kontakt</a>
         <a class="nav-cta" href="storitve.html">Vse storitve</a>
       </nav>
@@ -33,82 +33,74 @@
   <div class="nav-backdrop" aria-hidden="true"></div>
 
   <main id="vsebina">
+
     <section class="hero">
       <div class="container hero-grid">
-        <div class="hero-text"><img src="assets/kompino-logo.png" alt="KOMPINO" class="hero-logo">
+        <div class="hero-text">
+          <img src="assets/kompino-logo.png" alt="KOMPINO" class="hero-logo">
           <h1>Zanesljivo in hitro do rešitve</h1>
           <p class="lead">
             Prijazno, strokovno in hitro odpravljamo težave z računalniki,
-            da se lahko brezskrbno posvetite svojemu delu
+            da se lahko brezskrbno posvetite svojemu delu.
           </p>
-
           <div class="cta-row">
             <a class="btn primary" href="tel:+38641949729">Pokliči: +386 41 949 729</a>
             <a class="btn ghost" href="mailto:nino@kompino.eu">Pošlji e-mail</a>
           </div>
         </div>
 
-
-     <div class="container">
-       <h2>Storitve</h2>
-        <p class="muted">Kratek izbor. Na strani storitev je celoten seznam</p>
-
-        <div class="grid-3">
-         <div class="card">
-            <div class="card-title">Popravila in nadgradnje</div>
-            <p>PC in prenosniki, zamenjave komponent, čiščenje</p>
-         </div>
-
-          <div class="card">
-           <div class="card-title">Programska oprema</div>
-           <p>Namestitve, optimizacija, Office, zaščita, gonilniki</p>
-         </div>
-
-         <div class="card">
-           <div class="card-title">Omrežje in internet</div>
-           <p>WiFi, žična omrežja, e-pošta, varna konfiguracija</p>
-         </div>
-       </div>
-
-        <div class="section-cta">
-          <a class="btn primary" href="storitve.html">Poglej vse storitve</a>
-       </div>
-     </div>
+        <div class="hero-cards-col">
+          <h2>Storitve</h2>
+          <p class="muted" style="margin-bottom:14px;font-size:13px">Kratek izbor — na strani storitev je celoten seznam.</p>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div class="card fade-up delay-1">
+              <div class="card-title">Popravila in nadgradnje</div>
+              <p class="muted" style="margin:0;font-size:14px">PC in prenosniki, zamenjave komponent, čiščenje</p>
+            </div>
+            <div class="card fade-up delay-2">
+              <div class="card-title">Programska oprema</div>
+              <p class="muted" style="margin:0;font-size:14px">Namestitve, optimizacija, Office, zaščita, gonilniki</p>
+            </div>
+            <div class="card fade-up delay-3">
+              <div class="card-title">Omrežje in internet</div>
+              <p class="muted" style="margin:0;font-size:14px">WiFi, žična omrežja, e-pošta, varna konfiguracija</p>
+            </div>
+          </div>
+          <div class="section-cta" style="margin-top:16px">
+            <a class="btn primary" href="storitve.html">Poglej vse storitve</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="storitve" class="section">
       <div class="container">
         <div class="contract-box">
-          <div class="contract-left">
+          <div class="contract-left fade-up">
             <div class="kicker">Pogodbeno vzdrževanje</div>
             <h2>Zanesljiv partner za vaš posel</h2>
-
             <ul class="list">
               <li>Hitro odzivanje in prioritetno reševanje težav</li>
               <li>Neomejena telefonska podpora in pomoč na daljavo</li>
               <li>Strokovni nasveti pri nadgradnjah opreme</li>
               <li>Redno vzdrževanje in pregled sistemov</li>
-             <li>Ekskluzivni popusti na storitve</li>
+              <li>Ekskluzivni popusti na storitve</li>
             </ul>
           </div>
-
-         <div class="contract-right">
-           <div class="mini-card">
+          <div class="contract-right">
+            <div class="mini-card fade-up delay-1">
               <div class="mini-title">Hitro</div>
               <div class="mini-text">Jasen plan rešitve in odziv brez čakanja</div>
             </div>
-
-            <div class="mini-card">
+            <div class="mini-card fade-up delay-2">
               <div class="mini-title">Na daljavo</div>
               <div class="mini-text">Pomoč takoj, ko je mogoče</div>
             </div>
-
-            <div class="mini-card">
+            <div class="mini-card fade-up delay-3">
               <div class="mini-title">Preventiva</div>
               <div class="mini-text">Pregledi, čiščenje, optimizacija</div>
             </div>
-
-            <div class="mini-card">
+            <div class="mini-card fade-up delay-4">
               <div class="mini-title">Varnost</div>
               <div class="mini-text">Zaščita pred virusi in zlorabami</div>
             </div>
@@ -117,55 +109,38 @@
       </div>
     </section>
 
-   
-    
-
-
+    <!--
     <section id="reference" class="section">
       <div class="container">
         <h2>Reference</h2>
         <p class="muted">Podjetja, s katerimi sodelujemo</p>
-
-        
         <div class="ref-spotlight" aria-label="Reference podjetij">
-          
-
           <div class="ref-stage" role="group" aria-label="Prikaz logotipov">
             <button class="ref-side ref-prev" type="button" aria-label="Odpri prejšnjo referenco">
               <img class="ref-img" alt="Prejšnja referenca" loading="lazy">
             </button>
-
             <div class="ref-main" aria-label="Glavna referenca">
               <img class="ref-img" alt="Glavna referenca" loading="lazy">
             </div>
-
             <button class="ref-side ref-next" type="button" aria-label="Odpri naslednjo referenco">
               <img class="ref-img" alt="Naslednja referenca" loading="lazy">
             </button>
           </div>
-
-         
         </div>
       </div>
     </section>
-
-  
-</div>
-   
-
+    -->
 
     <section id="kontakt" class="section">
       <div class="container">
         <h2>Kontakt</h2>
-        
-
-        <div class="grid-3">
-          <div class="card">
+        <div class="grid-3" style="max-width:720px">
+          <div class="card fade-up">
             <div class="card-title">Telefon</div>
             <p class="big"><a href="tel:+38641949729">+386 41 949 729</a></p>
             <p class="muted">Klikni za klic</p>
           </div>
-          <div class="card">
+          <div class="card fade-up delay-1">
             <div class="card-title">E-mail</div>
             <p class="big"><a href="mailto:nino@kompino.eu">nino@kompino.eu</a></p>
             <p class="muted">Pošlji povpraševanje</p>
@@ -173,6 +148,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
@@ -180,7 +156,7 @@
       <div class="footer-left">
         <img class="footer-logo" src="assets/kompino-logo.png" alt="KOMPINO">
         <div class="footer-text">
-          <div class="muted">Računalniški servis in podpora</div>
+          <div class="muted" style="font-size:13px">Računalniški servis in podpora</div>
         </div>
       </div>
       <div class="footer-links">

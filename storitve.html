@@ -7,10 +7,12 @@
   <meta name="description" content="Storitve KOMPINO: programska oprema, popravila in nadgradnje, omrežje in internet." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <canvas id="circuit-bg"></canvas>
+
   <a class="skip" href="#vsebina">Preskoči na vsebino</a>
 
   <header class="topbar">
@@ -18,11 +20,9 @@
       <a class="brand" href="index.html" aria-label="KOMPINO domov">
         <img class="brand-logo" src="assets/kompino-logo.png" alt="KOMPINO logotip">
       </a>
-
       <button class="menu-btn" type="button" aria-label="Odpri meni" aria-expanded="false" aria-controls="nav">
         <span></span><span></span><span></span>
       </button>
-
       <nav id="nav" class="nav">
         <a href="index.html">Domov</a>
         <a href="#programska">Programska oprema</a>
@@ -34,12 +34,11 @@
   </header>
 
   <main id="vsebina">
+
     <section class="hero hero-small">
-      <div class="container hero-grid">
+      <div class="container">
         <div class="hero-text">
           <h1>Storitve</h1>
-          <p class="lead">
-          </p>
         </div>
       </div>
     </section>
@@ -47,7 +46,7 @@
     <section class="section" id="popravila">
       <div class="container">
         <h2>Popravila in nadgradnje</h2>
-        <div class="card">
+        <div class="card fade-up">
           <ul class="list">
             <li>Osebni računalniki in prenosniki</li>
             <li>Monitorji in tiskalniki</li>
@@ -58,11 +57,8 @@
           </ul>
         </div>
         <div class="section-cta">
-         <a class="btn primary" href="tel:+38641949729">Pokliči</a>
-           <a class="btn ghost"
-            href="mailto:nino@kompino.eu?subject=Povpraševanje%20-%20Popravila%20in%20nadgradnje">
-             Pošlji povpraševanje
-         </a>
+          <a class="btn primary" href="tel:+38641949729">Pokliči</a>
+          <a class="btn ghost" href="mailto:nino@kompino.eu?subject=Povpraševanje%20-%20Popravila%20in%20nadgradnje">Pošlji povpraševanje</a>
         </div>
       </div>
     </section>
@@ -70,7 +66,7 @@
     <section class="section" id="programska">
       <div class="container">
         <h2>Programska oprema</h2>
-        <div class="card">
+        <div class="card fade-up">
           <ul class="list">
             <li>Namestitev programov po želji</li>
             <li>Windows in Mac OS X operacijski sistemi</li>
@@ -82,11 +78,8 @@
           </ul>
         </div>
         <div class="section-cta">
-         <a class="btn primary" href="tel:+38641949729">Pokliči</a>
-          <a class="btn ghost"
-            href="mailto:nino@kompino.eu?subject=Povpraševanje%20-%20Programska%20oprema">
-             Pošlji povpraševanje
-          </a>
+          <a class="btn primary" href="tel:+38641949729">Pokliči</a>
+          <a class="btn ghost" href="mailto:nino@kompino.eu?subject=Povpraševanje%20-%20Programska%20oprema">Pošlji povpraševanje</a>
         </div>
       </div>
     </section>
@@ -94,7 +87,7 @@
     <section class="section" id="omrezje">
       <div class="container">
         <h2>Omrežje in internet</h2>
-        <div class="card">
+        <div class="card fade-up">
           <ul class="list">
             <li>Nastavitve brezžičnih (WiFi) in žičnih omrežij</li>
             <li>Nastavitve elektronske pošte</li>
@@ -102,31 +95,26 @@
             <li>Konfiguracija varne WiFi povezave</li>
           </ul>
         </div>
-
-       
         <div class="section-cta">
-         <a class="btn primary" href="tel:+38641949729">Pokliči</a>
-         <a class="btn ghost"
-             href="mailto:nino@kompino.eu?subject=Povpraševanje%20-%20Omrežje%20in%20internet">
-            Pošlji povpraševanje
-          </a>
+          <a class="btn primary" href="tel:+38641949729">Pokliči</a>
+          <a class="btn ghost" href="mailto:nino@kompino.eu?subject=Povpraševanje%20-%20Omrežje%20in%20internet">Pošlji povpraševanje</a>
         </div>
       </div>
     </section>
 
     <section class="section" id="vzdrzevanje">
-     <div class="container">
+      <div class="container">
         <h2>Vzdrževanje</h2>
-
-       <div class="vzdrzevanje-wrap">
-          <div class="card">
+        <div class="vzdrzevanje-wrap">
+          <div class="card fade-up">
             <div class="kicker">Za podjetja in doma</div>
             <div class="card-title">Brezhibno delovanje opreme</div>
             <p class="muted">Vzdrževanje, servis, nadgradnje in varna nastavitev</p>
           </div>
         </div>
-     </div>
+      </div>
     </section>
+
   </main>
 
   <footer class="footer">
@@ -135,7 +123,7 @@
         <img class="footer-logo" src="assets/kompino-logo.png" alt="KOMPINO">
         <div class="footer-text">
           <div class="footer-title">KOMPINO</div>
-          <div class="muted">Računalniški servis in podpora</div>
+          <div class="muted" style="font-size:13px">Računalniški servis in podpora</div>
         </div>
       </div>
       <div class="footer-links">
